@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "MuteInactiveTabs",
+    "description": "This extension will auto mute inactive tabs",
+    "version": "1.0",
+    "background": {
+        "service_worker": "background.js"
+    },
+
+    "action": {
+        "default_icon": "./resources/icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage",
+        "tabs"
+      ]
+}
