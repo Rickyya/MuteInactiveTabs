@@ -18,7 +18,7 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
     } else {
       // Mute every tab except current one when turned on
       tabs.forEach(function (tab) {
-        (tab.active) ? muteTab(tab.id, false) : muteTab(tab.id, true);
+        (tab.active && tab.currentWindow) ? muteTab(tab.id, false) : muteTab(tab.id, true);
       });
     }
   });
